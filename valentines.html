@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .message {
+            font-size: 2em;
+            color: red;
+            font-weight: bold;
+            animation: pulse 1.5s infinite alternate;
+            display: none;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        .image {
+            width: 200px;
+            height: auto;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .video {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="button" onclick="showMessage()">Click Me</button>
+    <div class="message" id="valentineMessage">
+        Happy Valentine's Day, Jeli!❤️
+        <br><br>
+        Hope you enjoyed your day baby.
+        <br><br>
+    </div>
+    <video id="valentineVideo" class="video" width="320" height="240" controls>
+        <source src="WhatsApp Video 2025-02-14 at 4.39.44 PM.mp4" type="video/mp4">
+    </video>
+    <script>
+        function showMessage() {
+            document.querySelector('.button').style.display = 'none';
+            document.getElementById('valentineMessage').style.display = 'block';
+            document.getElementById('valentineVideo').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
